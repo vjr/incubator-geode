@@ -80,7 +80,7 @@ public class GfshInitFileJUnitTest {
     File log4j2XML = temporaryFolder_Config.newFile("log4j2.xml");
     FileUtils.writeStringToFile(log4j2XML, "<Configuration/>", APPEND);
     System.setProperty(ConfigurationFactory.CONFIGURATION_FILE_PROPERTY,
-        log4j2XML.getAbsolutePath());
+        log4j2XML.toURI().toString());
   }
 
   /*
