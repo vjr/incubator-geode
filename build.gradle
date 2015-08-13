@@ -261,6 +261,14 @@ subprojects {
     main.runtimeClasspath -= configurations.provided
     test.compileClasspath += configurations.provided
     test.runtimeClasspath += configurations.provided
+    main {
+      java {
+        srcDir 'src/main/java'
+      }
+      resources {
+        srcDir 'src/main/resources'
+      }
+    }
   }
 
   javadoc.classpath += configurations.provided

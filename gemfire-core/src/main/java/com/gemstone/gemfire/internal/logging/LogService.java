@@ -110,10 +110,20 @@ public class LogService extends LogManager {
     return new AppenderContext(name);
   }
   
+  private static final String GEMFIRE_CONFIG_LOCATION_BUILD = "gemfire-core" + File.separator + "build" + File.separator + "resources" + File.separator + "main" + File.separator + "log4j2.xml";
+  private static final String GEMFIRE_CONFIG_LOCATION_JAR = "gemfire-core" + File.separator + "build" + File.separator + "resources" + File.separator + "main" + File.separator + "log4j2.xml";
+  
   public static boolean isUsingGemFireDefaultConfig() {
-    final String configFileName = new StrSubstitutor(new Interpolator()).replace(
-        PropertiesUtil.getProperties().getStringProperty(ConfigurationFactory.CONFIGURATION_FILE_PROPERTY));
-    return configFileName == null ? false : configFileName.contains(DEFAULT_CONFIG);
+//    final String configFileName = new StrSubstitutor(new Interpolator()).replace(
+//        PropertiesUtil.getProperties().getStringProperty(ConfigurationFactory.CONFIGURATION_FILE_PROPERTY));
+//    return configFileName == null ? false : configFileName.contains(DEFAULT_CONFIG);
+    final Configuration config = ((org.apache.logging.log4j.core.Logger)
+        LogManager.getLogger(ROOT_LOGGER_NAME, GemFireParameterizedMessageFactory.INSTANCE)).getContext().getConfiguration();
+    final String location = Configurator.getConfigurationSourceLocation(config);
+    if (location.contains(GEMFIRE_CONFIG_LOCATION_BUILD) || location.contains(GEMFIRE_CONFIG_LOCATION_JAR)) {
+      return true;
+    }
+    return false;
   }
   
   /**
