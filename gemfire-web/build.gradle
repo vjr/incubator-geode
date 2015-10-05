@@ -4,13 +4,15 @@ dependencies {
   runtime 'org.springframework:spring-aspects:' + project.'springframework.version'
   runtime 'org.springframework:spring-oxm:' + project.'springframework.version'
   runtime 'commons-fileupload:commons-fileupload:' + project.'commons-fileupload.version'
+
+  testCompile 'org.springframework:spring-test:' + project.'springframework.version'
   
   provided 'javax.servlet:javax.servlet-api:' + project.'javax.servlet-api.version'
   
   // have to use output since we exclude the dependent classes from jar :(
   provided project(path: ':gemfire-core', configuration: 'classesOutput')
   
-  provided project(':gemfire-core')
+  testRuntime project(':gemfire-core')
 
   provided project(path: ':gemfire-junit', configuration: 'testOutput')
 }
