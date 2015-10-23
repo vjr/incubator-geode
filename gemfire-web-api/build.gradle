@@ -1,30 +1,30 @@
 apply plugin: 'war'
 
 dependencies {
-  compile 'commons-lang:commons-lang:2.4'
-  compile 'commons-fileupload:commons-fileupload:1.3.1'
-  compile 'com.fasterxml:classmate:0.9.0'
-  compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.0'
-  compile 'com.fasterxml.jackson.core:jackson-core:2.2.0'
-  compile 'com.fasterxml.jackson.core:jackson-databind:2.2.0'
-  compile 'com.fasterxml.jackson.module:jackson-module-scala_2.10:2.1.5'
-  compile 'com.google.guava:guava:15.0'
-  compile 'com.mangofactory:swagger-springmvc:0.8.2'
-  compile 'org.json4s:json4s-ast_2.10:3.2.4'
-  compile 'org.json4s:json4s-ext_2.10:3.2.4'
-  compile 'org.json4s:json4s-core_2.10:3.2.4'
-  compile 'org.json4s:json4s-jackson_2.10:3.2.4'
-  compile 'org.json4s:json4s-native_2.10:3.2.4'
-  compile 'org.scala-lang:scala-reflect:2.10.0'
-  compile 'org.scala-lang:scala-library:2.10.0'
-  compile 'org.springframework.hateoas:spring-hateoas:0.16.0.RELEASE'
-  compile 'org.springframework:spring-aspects:3.2.12.RELEASE'
-  compile 'org.springframework:spring-oxm:3.2.12.RELEASE'
-  compile 'com.thoughtworks.paranamer:paranamer:2.3'
-  compile 'com.wordnik:swagger-annotations:1.3.2'
-  compile 'com.wordnik:swagger-core_2.10:1.3.2'
+  compile 'commons-lang:commons-lang:' + property("commons-lang.version")
+  compile 'commons-fileupload:commons-fileupload:' + property("commons-fileupload.version")
+  compile 'com.fasterxml:classmate:' + property("classmate.version")
+  compile 'com.fasterxml.jackson.core:jackson-annotations:' + property("jackson.version")
+  compile 'com.fasterxml.jackson.core:jackson-core:' + property("jackson.version")
+  compile 'com.fasterxml.jackson.core:jackson-databind:' + property("jackson.version")
+  compile 'com.fasterxml.jackson.module:jackson-module-scala_2.10:' + property("jackson-module-scala_2.10.version")
+  compile 'com.google.guava:guava:' + property("guava.version")
+  compile 'com.mangofactory:swagger-springmvc:' + property("swagger-springmvc.version")
+  compile 'org.json4s:json4s-ast_2.10:' + property("json4s.version")
+  compile 'org.json4s:json4s-ext_2.10:' + property("json4s.version")
+  compile 'org.json4s:json4s-core_2.10:' + property("json4s.version")
+  compile 'org.json4s:json4s-jackson_2.10:' + property("json4s.version")
+  compile 'org.json4s:json4s-native_2.10:' + property("json4s.version")
+  compile 'org.scala-lang:scala-library:' + property("scala.version")
+  compile 'org.scala-lang:scala-reflect:' + property("scala.version")
+  compile 'org.springframework.hateoas:spring-hateoas:' + property("spring-hateos.version")
+  compile 'org.springframework:spring-aspects:' + property("springframework.version")
+  compile 'org.springframework:spring-oxm:' + property("springframework.version")
+  compile 'com.thoughtworks.paranamer:paranamer:' + property("paranamer.version")
+  compile 'com.wordnik:swagger-annotations:' + property("swagger.version")
+  compile 'com.wordnik:swagger-core_2.10:' + property("swagger.version")
 
-  provided 'javax.servlet:javax.servlet-api:3.1.0'
+  provided 'javax.servlet:javax.servlet-api:' + property("javax.servlet-api.version")
   provided project(':gemfire-core')
 }
 

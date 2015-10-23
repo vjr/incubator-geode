@@ -11,77 +11,83 @@ configurations {
 }
 
 dependencies {
+  // Source Dependencies
+  // External 
   provided files("${System.getProperty('java.home')}/../lib/tools.jar")
-  compile 'antlr:antlr:2.7.7'
-  compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.0'
-  compile 'com.fasterxml.jackson.core:jackson-core:2.2.0'
-  compile 'com.fasterxml.jackson.core:jackson-databind:2.2.0'
-  compile 'com.google.code.findbugs:annotations:3.0.0'
-  compile 'commons-io:commons-io:2.3'
-  compile 'commons-logging:commons-logging:1.1.1'
-  compile 'commons-modeler:commons-modeler:2.0'
-  compile 'org.apache.lucene:lucene-analyzers-common:5.0.0'
-  compile 'org.apache.lucene:lucene-core:5.0.0'
-  compile 'org.apache.lucene:lucene-queries:5.0.0'
-  compile 'org.apache.lucene:lucene-queryparser:5.0.0'
-  compile 'it.unimi.dsi:fastutil:7.0.2'
-  compile 'javax.activation:activation:1.1.1'
-  compile 'javax.mail:javax.mail-api:1.4.5'
-  compile 'javax.resource:javax.resource-api:1.7'
-  compile 'javax.servlet:javax.servlet-api:3.1.0'
-  compile 'javax.transaction:javax.transaction-api:1.2'
-  compile 'mx4j:mx4j:3.0.1'
-  compile 'mx4j:mx4j-remote:3.0.1'
-  compile 'mx4j:mx4j-tools:3.0.1'
-  compile 'net.java.dev.jna:jna:4.0.0'
-  compile 'net.sourceforge.jline:jline:1.0.S2-B'
-  compile 'org.eclipse.jetty:jetty-http:9.2.3.v20140905'
-  compile 'org.eclipse.jetty:jetty-io:9.2.3.v20140905'
-  compile 'org.eclipse.jetty:jetty-security:9.2.3.v20140905'
-  compile 'org.eclipse.jetty:jetty-server:9.2.3.v20140905'
-  compile 'org.eclipse.jetty:jetty-servlet:9.2.3.v20140905'
-  compile 'org.eclipse.jetty:jetty-util:9.2.3.v20140905'
-  compile 'org.eclipse.jetty:jetty-webapp:9.2.3.v20140905'
-  compile 'org.eclipse.jetty:jetty-xml:9.2.3.v20140905'
-  compile 'org.fusesource.jansi:jansi:1.8'
-  compile 'org.apache.logging.log4j:log4j-api:2.1'
-  compile 'org.apache.logging.log4j:log4j-core:2.1'
-  runtime 'org.apache.logging.log4j:log4j-slf4j-impl:2.1'
-  runtime 'org.apache.logging.log4j:log4j-jcl:2.1'
-  runtime 'org.apache.logging.log4j:log4j-jul:2.1'
-  compile 'org.slf4j:slf4j-api:1.7.7'
-  compile 'org.springframework.data:spring-data-commons:1.9.1.RELEASE'
-  provided 'org.springframework.data:spring-data-gemfire:1.5.1.RELEASE'
-  compile 'org.springframework:spring-tx:3.2.12.RELEASE'
-  compile 'org.springframework.shell:spring-shell:1.0.0.RELEASE'
-  compile 'org.xerial.snappy:snappy-java:1.1.1.6'
-  provided 'org.apache.hadoop:hadoop-common:2.4.1'
-  provided 'org.apache.hadoop:hadoop-annotations:2.4.1'
-  provided 'org.apache.hadoop:hadoop-hdfs:2.4.1'
-  provided 'org.apache.hadoop:hadoop-mapreduce-client-core:2.4.1'
-  compile 'org.apache.hbase:hbase:0.94.27'
-  provided 'commons-lang:commons-lang:2.5'
-  provided 'com.google.guava:guava:11.0.2'
-  compile 'io.netty:netty-all:4.0.4.Final'
+  compile 'antlr:antlr:' + property("antlr.version")
+  compile 'com.fasterxml.jackson.core:jackson-annotations:' + property("jackson.version")
+  compile 'com.fasterxml.jackson.core:jackson-core:' + property("jackson.version")
+  compile 'com.fasterxml.jackson.core:jackson-databind:' + property("jackson.version")
+  compile 'com.google.code.findbugs:annotations:' + property("annotations.version")
+  provided 'com.google.guava:guava:' + property("guava.version")
+  compile 'commons-io:commons-io:' + property("commons-io.version")
+  provided 'commons-lang:commons-lang:' + property("commons-lang.version")
+  compile 'commons-logging:commons-logging:' + property("commons-logging.version")
+  compile 'commons-modeler:commons-modeler:' + property("commons-modeler.version")
+  compile 'io.netty:netty-all:' + property("netty-all.version")
+  compile 'it.unimi.dsi:fastutil:' + property("fastutil.version")
+  compile 'javax.activation:activation:' + property("activation.version")
+  compile 'javax.mail:javax.mail-api:' + property("javax.mail-api.version")
+  compile 'javax.resource:javax.resource-api:' + property("javax.resource-api.version")
+  compile 'javax.servlet:javax.servlet-api:' + property("javax.servlet-api.version")
+  compile 'javax.transaction:javax.transaction-api:' + property("javax.transaction-api.version")
+  compile 'mx4j:mx4j:' + property("mx4j.version")
+  compile 'mx4j:mx4j-remote:' + property("mx4j.version")
+  compile 'mx4j:mx4j-tools:' + property("mx4j.version")
+  compile 'net.java.dev.jna:jna:' + property("jna.version")
+  compile 'net.sourceforge.jline:jline:' + property("jline.version")
+  provided 'org.apache.hadoop:hadoop-common:' + property("hadoop.version")
+  provided 'org.apache.hadoop:hadoop-annotations:' + property("hadoop.version")
+  provided 'org.apache.hadoop:hadoop-hdfs:' + property("hadoop.version")
+  provided 'org.apache.hadoop:hadoop-mapreduce-client-core:' + property("hadoop.version")
+  compile 'org.apache.hbase:hbase:' + property("hbase.version")
+  compile 'org.apache.logging.log4j:log4j-api:' + property("log4j.version")
+  compile 'org.apache.logging.log4j:log4j-core:' + property("log4j.version")
+  runtime 'org.apache.logging.log4j:log4j-slf4j-impl:' + property("log4j.version")
+  runtime 'org.apache.logging.log4j:log4j-jcl:' + property("log4j.version")
+  runtime 'org.apache.logging.log4j:log4j-jul:' + property("log4j.version")
+  compile 'org.apache.lucene:lucene-analyzers-common:' + property("lucene.version")
+  compile 'org.apache.lucene:lucene-core:' + property("lucene.version")
+  compile 'org.apache.lucene:lucene-queries:' + property("lucene.version")
+  compile 'org.apache.lucene:lucene-queryparser:' + property("lucene.version")
+  compile 'org.eclipse.jetty:jetty-http:' + property("jetty.version")
+  compile 'org.eclipse.jetty:jetty-io:' + property("jetty.version")
+  compile 'org.eclipse.jetty:jetty-security:' + property("jetty.version")
+  compile 'org.eclipse.jetty:jetty-server:' + property("jetty.version")
+  compile 'org.eclipse.jetty:jetty-servlet:' + property("jetty.version")
+  compile 'org.eclipse.jetty:jetty-util:' + property("jetty.version")
+  compile 'org.eclipse.jetty:jetty-webapp:' + property("jetty.version")
+  compile 'org.eclipse.jetty:jetty-xml:' + property("jetty.version")
+  compile 'org.fusesource.jansi:jansi:' + property("jansi.version")
+  compile 'org.slf4j:slf4j-api:' + property("slf4j-api.version")
+  compile 'org.springframework.data:spring-data-commons:' + property("spring-data-commons.version")
+  provided 'org.springframework.data:spring-data-gemfire:' + property("spring-data-gemfire.version")
+  compile 'org.springframework:spring-tx:' + property("springframework.version")
+  compile 'org.springframework.shell:spring-shell:' + property("spring-shell.version")
+  compile 'org.xerial.snappy:snappy-java:' + property("snappy-java.version")
+  compile 'org.apache.hbase:hbase:' + property("hbase.version")
 
-  testRuntime 'org.apache.hadoop:hadoop-auth:2.4.1'
-  testRuntime 'commons-collections:commons-collections:3.2.1'
-  testRuntime 'commons-configuration:commons-configuration:1.6'
-  testRuntime 'commons-io:commons-io:2.1'
-  testRuntime 'log4j:log4j:1.2.17'
-  
+  // Internal
   compile project(':gemfire-jgroups')
   compile project(':gemfire-joptsimple')
   compile project(':gemfire-json')
-  
-  testCompile 'org.apache.bcel:bcel:5.2'
-  testRuntime 'org.apache.derby:derby:10.2.2.0'
-  testCompile 'net.spy:spymemcached:2.9.0'
-  testCompile 'redis.clients:jedis:2.7.2'
 
   jcaCompile sourceSets.main.output
 
   provided project(path: ':gemfire-junit', configuration: 'testOutput')
+
+  // Test Dependencies
+  // External
+  testCompile 'org.apache.bcel:bcel:' + property("bcel.version")
+  testRuntime 'org.apache.derby:derby:' + property("derby.version")
+  testRuntime 'org.apache.hadoop:hadoop-auth:' + property("hadoop.version")
+  testRuntime 'commons-collections:commons-collections:' + property("commons-collections.version")
+  testRuntime 'commons-configuration:commons-configuration:' + property("commons-configuration.version")
+  testRuntime 'commons-io:commons-io:' + property("commons-io.version")
+  //testRuntime 'log4j:log4j:' + property("log4j.version")
+  testCompile 'net.spy:spymemcached:' + property("spymemcached.version")
+  testCompile 'redis.clients:jedis:' + property("jedis.version")
+
 }
 
 def generatedResources = "$buildDir/generated-resources/main"
