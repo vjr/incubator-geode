@@ -386,7 +386,7 @@ public abstract class CacheTestCase extends DistributedTestCase {
   public static synchronized void closeCache() {
     //Workaround for that fact that some classes are now extending
     //CacheTestCase but not using it properly.
-    if(cache == null) {
+    if(cache == null || cache.isClosed()) {
       cache = GemFireCacheImpl.getInstance();
     }
     try {
