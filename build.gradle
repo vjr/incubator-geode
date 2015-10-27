@@ -1,5 +1,11 @@
 apply plugin: 'wrapper'
 
+
+// Load all properties in dependency-version.properties as project properties, so all projects can read them
+Properties dependencyVersions = new Properties()
+dependencyVersions.load(new FileInputStream("../open/gradle/dependency-versions.properties"))
+dependencyVersions.keys().each{ k -> project.ext[k] = dependencyVersions[k]}
+
 allprojects {
   version = versionNumber + '-' + releaseType
   // We want to see all test results.  This is equivalatent to setting --continue
