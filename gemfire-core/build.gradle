@@ -14,58 +14,58 @@ dependencies {
   // Source Dependencies
   // External 
   provided files("${System.getProperty('java.home')}/../lib/tools.jar")
-  compile 'antlr:antlr:' + property("antlr.version")
-  compile 'com.fasterxml.jackson.core:jackson-annotations:' + property("jackson.version")
-  compile 'com.fasterxml.jackson.core:jackson-core:' + property("jackson.version")
-  compile 'com.fasterxml.jackson.core:jackson-databind:' + property("jackson.version")
-  compile 'com.google.code.findbugs:annotations:' + property("annotations.version")
-  provided 'com.google.guava:guava:' + property("guava.version")
-  compile 'commons-io:commons-io:' + property("commons-io.version")
-  provided 'commons-lang:commons-lang:' + property("commons-lang.version")
-  compile 'commons-logging:commons-logging:' + property("commons-logging.version")
-  compile 'commons-modeler:commons-modeler:' + property("commons-modeler.version")
-  compile 'io.netty:netty-all:' + property("netty-all.version")
-  compile 'it.unimi.dsi:fastutil:' + property("fastutil.version")
-  compile 'javax.activation:activation:' + property("activation.version")
-  compile 'javax.mail:javax.mail-api:' + property("javax.mail-api.version")
-  compile 'javax.resource:javax.resource-api:' + property("javax.resource-api.version")
-  compile 'javax.servlet:javax.servlet-api:' + property("javax.servlet-api.version")
-  compile 'javax.transaction:javax.transaction-api:' + property("javax.transaction-api.version")
-  compile 'mx4j:mx4j:' + property("mx4j.version")
-  compile 'mx4j:mx4j-remote:' + property("mx4j.version")
-  compile 'mx4j:mx4j-tools:' + property("mx4j.version")
-  compile 'net.java.dev.jna:jna:' + property("jna.version")
-  compile 'net.sourceforge.jline:jline:' + property("jline.version")
-  provided 'org.apache.hadoop:hadoop-common:' + property("hadoop.version")
-  provided 'org.apache.hadoop:hadoop-annotations:' + property("hadoop.version")
-  provided 'org.apache.hadoop:hadoop-hdfs:' + property("hadoop.version")
-  provided 'org.apache.hadoop:hadoop-mapreduce-client-core:' + property("hadoop.version")
-  compile 'org.apache.hbase:hbase:' + property("hbase.version")
-  compile 'org.apache.logging.log4j:log4j-api:' + property("log4j.version")
-  compile 'org.apache.logging.log4j:log4j-core:' + property("log4j.version")
-  runtime 'org.apache.logging.log4j:log4j-slf4j-impl:' + property("log4j.version")
-  runtime 'org.apache.logging.log4j:log4j-jcl:' + property("log4j.version")
-  runtime 'org.apache.logging.log4j:log4j-jul:' + property("log4j.version")
-  compile 'org.apache.lucene:lucene-analyzers-common:' + property("lucene.version")
-  compile 'org.apache.lucene:lucene-core:' + property("lucene.version")
-  compile 'org.apache.lucene:lucene-queries:' + property("lucene.version")
-  compile 'org.apache.lucene:lucene-queryparser:' + property("lucene.version")
-  compile 'org.eclipse.jetty:jetty-http:' + property("jetty.version")
-  compile 'org.eclipse.jetty:jetty-io:' + property("jetty.version")
-  compile 'org.eclipse.jetty:jetty-security:' + property("jetty.version")
-  compile 'org.eclipse.jetty:jetty-server:' + property("jetty.version")
-  compile 'org.eclipse.jetty:jetty-servlet:' + property("jetty.version")
-  compile 'org.eclipse.jetty:jetty-util:' + property("jetty.version")
-  compile 'org.eclipse.jetty:jetty-webapp:' + property("jetty.version")
-  compile 'org.eclipse.jetty:jetty-xml:' + property("jetty.version")
-  compile 'org.fusesource.jansi:jansi:' + property("jansi.version")
-  compile 'org.slf4j:slf4j-api:' + property("slf4j-api.version")
-  compile 'org.springframework.data:spring-data-commons:' + property("spring-data-commons.version")
-  provided 'org.springframework.data:spring-data-gemfire:' + property("spring-data-gemfire.version")
-  compile 'org.springframework:spring-tx:' + property("springframework.version")
-  compile 'org.springframework.shell:spring-shell:' + property("spring-shell.version")
-  compile 'org.xerial.snappy:snappy-java:' + property("snappy-java.version")
-  compile 'org.apache.hbase:hbase:' + property("hbase.version")
+  compile 'antlr:antlr:' + project.'antlr.version'
+  compile 'com.fasterxml.jackson.core:jackson-annotations:' + project.'jackson.version'
+  compile 'com.fasterxml.jackson.core:jackson-core:' + project.'jackson.version'
+  compile 'com.fasterxml.jackson.core:jackson-databind:' + project.'jackson.version'
+  compile 'com.google.code.findbugs:annotations:' + project.'annotations.version'
+  provided 'com.google.guava:guava:' + project.'guava.version'
+  compile 'commons-io:commons-io:' + project.'commons-io.version'
+  provided 'commons-lang:commons-lang:' + project.'commons-lang.version'
+  compile 'commons-logging:commons-logging:' + project.'commons-logging.version'
+  compile 'commons-modeler:commons-modeler:' + project.'commons-modeler.version'
+  compile 'io.netty:netty-all:' + project.'netty-all.version'
+  compile 'it.unimi.dsi:fastutil:' + project.'fastutil.version'
+  compile 'javax.activation:activation:' + project.'activation.version'
+  compile 'javax.mail:javax.mail-api:' + project.'javax.mail-api.version'
+  compile 'javax.resource:javax.resource-api:' + project.'javax.resource-api.version'
+  compile 'javax.servlet:javax.servlet-api:' + project.'javax.servlet-api.version'
+  compile 'javax.transaction:javax.transaction-api:' + project.'javax.transaction-api.version'
+  compile 'mx4j:mx4j:' + project.'mx4j.version'
+  compile 'mx4j:mx4j-remote:' + project.'mx4j.version'
+  compile 'mx4j:mx4j-tools:' + project.'mx4j.version'
+  compile 'net.java.dev.jna:jna:' + project.'jna.version'
+  compile 'net.sourceforge.jline:jline:' + project.'jline.version'
+  provided 'org.apache.hadoop:hadoop-common:' + project.'hadoop.version'
+  provided 'org.apache.hadoop:hadoop-annotations:' + project.'hadoop.version'
+  provided 'org.apache.hadoop:hadoop-hdfs:' + project.'hadoop.version'
+  provided 'org.apache.hadoop:hadoop-mapreduce-client-core:' + project.'hadoop.version'
+  compile 'org.apache.hbase:hbase:' + project.'hbase.version'
+  compile 'org.apache.logging.log4j:log4j-api:' + project.'log4j.version'
+  compile 'org.apache.logging.log4j:log4j-core:' + project.'log4j.version'
+  runtime 'org.apache.logging.log4j:log4j-slf4j-impl:' + project.'log4j.version'
+  runtime 'org.apache.logging.log4j:log4j-jcl:' + project.'log4j.version'
+  runtime 'org.apache.logging.log4j:log4j-jul:' + project.'log4j.version'
+  compile 'org.apache.lucene:lucene-analyzers-common:' + project.'lucene.version'
+  compile 'org.apache.lucene:lucene-core:' + project.'lucene.version'
+  compile 'org.apache.lucene:lucene-queries:' + project.'lucene.version'
+  compile 'org.apache.lucene:lucene-queryparser:' + project.'lucene.version'
+  compile 'org.eclipse.jetty:jetty-http:' + project.'jetty.version'
+  compile 'org.eclipse.jetty:jetty-io:' + project.'jetty.version'
+  compile 'org.eclipse.jetty:jetty-security:' + project.'jetty.version'
+  compile 'org.eclipse.jetty:jetty-server:' + project.'jetty.version'
+  compile 'org.eclipse.jetty:jetty-servlet:' + project.'jetty.version'
+  compile 'org.eclipse.jetty:jetty-util:' + project.'jetty.version'
+  compile 'org.eclipse.jetty:jetty-webapp:' + project.'jetty.version'
+  compile 'org.eclipse.jetty:jetty-xml:' + project.'jetty.version'
+  compile 'org.fusesource.jansi:jansi:' + project.'jansi.version'
+  compile 'org.slf4j:slf4j-api:' + project.'slf4j-api.version'
+  compile 'org.springframework.data:spring-data-commons:' + project.'spring-data-commons.version'
+  provided 'org.springframework.data:spring-data-gemfire:' + project.'spring-data-gemfire.version'
+  compile 'org.springframework:spring-tx:' + project.'springframework.version'
+  compile 'org.springframework.shell:spring-shell:' + project.'spring-shell.version'
+  compile 'org.xerial.snappy:snappy-java:' + project.'snappy-java.version'
+  compile 'org.apache.hbase:hbase:' + project.'hbase.version'
 
   // Internal
   compile project(':gemfire-jgroups')
@@ -78,15 +78,15 @@ dependencies {
 
   // Test Dependencies
   // External
-  testCompile 'org.apache.bcel:bcel:' + property("bcel.version")
-  testRuntime 'org.apache.derby:derby:' + property("derby.version")
-  testRuntime 'org.apache.hadoop:hadoop-auth:' + property("hadoop.version")
-  testRuntime 'commons-collections:commons-collections:' + property("commons-collections.version")
-  testRuntime 'commons-configuration:commons-configuration:' + property("commons-configuration.version")
-  testRuntime 'commons-io:commons-io:' + property("commons-io.version")
-  //testRuntime 'log4j:log4j:' + property("log4j.version")
-  testCompile 'net.spy:spymemcached:' + property("spymemcached.version")
-  testCompile 'redis.clients:jedis:' + property("jedis.version")
+  testCompile 'org.apache.bcel:bcel:' + project.'bcel.version'
+  testRuntime 'org.apache.derby:derby:' + project.'derby.version'
+  testRuntime 'org.apache.hadoop:hadoop-auth:' + project.'hadoop.version'
+  testRuntime 'commons-collections:commons-collections:' + project.'commons-collections.version'
+  testRuntime 'commons-configuration:commons-configuration:' + project.'commons-configuration.version'
+  testRuntime 'commons-io:commons-io:' + project.'commons-io.version'
+  //testRuntime 'log4j:log4j:' + project.'log4j.version'
+  testCompile 'net.spy:spymemcached:' + project.'spymemcached.version'
+  testCompile 'redis.clients:jedis:' + project.'jedis.version'
 
 }
 

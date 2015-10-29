@@ -1,30 +1,30 @@
 apply plugin: 'war'
 
 dependencies {
-  compile 'commons-lang:commons-lang:' + property("commons-lang.version")
-  compile 'commons-fileupload:commons-fileupload:' + property("commons-fileupload.version")
-  compile 'com.fasterxml:classmate:' + property("classmate.version")
-  compile 'com.fasterxml.jackson.core:jackson-annotations:' + property("jackson.version")
-  compile 'com.fasterxml.jackson.core:jackson-core:' + property("jackson.version")
-  compile 'com.fasterxml.jackson.core:jackson-databind:' + property("jackson.version")
-  compile 'com.fasterxml.jackson.module:jackson-module-scala_2.10:' + property("jackson-module-scala_2.10.version")
-  compile 'com.google.guava:guava:' + property("guava.version")
-  compile 'com.mangofactory:swagger-springmvc:' + property("swagger-springmvc.version")
-  compile 'org.json4s:json4s-ast_2.10:' + property("json4s.version")
-  compile 'org.json4s:json4s-ext_2.10:' + property("json4s.version")
-  compile 'org.json4s:json4s-core_2.10:' + property("json4s.version")
-  compile 'org.json4s:json4s-jackson_2.10:' + property("json4s.version")
-  compile 'org.json4s:json4s-native_2.10:' + property("json4s.version")
-  compile 'org.scala-lang:scala-library:' + property("scala.version")
-  compile 'org.scala-lang:scala-reflect:' + property("scala.version")
-  compile 'org.springframework.hateoas:spring-hateoas:' + property("spring-hateos.version")
-  compile 'org.springframework:spring-aspects:' + property("springframework.version")
-  compile 'org.springframework:spring-oxm:' + property("springframework.version")
-  compile 'com.thoughtworks.paranamer:paranamer:' + property("paranamer.version")
-  compile 'com.wordnik:swagger-annotations:' + property("swagger.version")
-  compile 'com.wordnik:swagger-core_2.10:' + property("swagger.version")
+  compile 'commons-lang:commons-lang:' + project.'commons-lang.version'
+  compile 'commons-fileupload:commons-fileupload:' + project.'commons-fileupload.version'
+  compile 'com.fasterxml:classmate:' + project.'classmate.version'
+  compile 'com.fasterxml.jackson.core:jackson-annotations:' + project.'jackson.version'
+  compile 'com.fasterxml.jackson.core:jackson-core:' + project.'jackson.version'
+  compile 'com.fasterxml.jackson.core:jackson-databind:' + project.'jackson.version'
+  compile 'com.fasterxml.jackson.module:jackson-module-scala_2.10:' + project.'jackson-module-scala_2.10.version'
+  compile 'com.google.guava:guava:' + project.'guava.version'
+  compile 'com.mangofactory:swagger-springmvc:' + project.'swagger-springmvc.version'
+  compile 'com.thoughtworks.paranamer:paranamer:' + project.'paranamer.version'
+  compile 'com.wordnik:swagger-annotations:' + project.'swagger.version'
+  compile 'com.wordnik:swagger-core_2.10:' + project.'swagger.version'
+  compile 'org.json4s:json4s-ast_2.10:' + project.'json4s.version'
+  compile 'org.json4s:json4s-ext_2.10:' + project.'json4s.version'
+  compile 'org.json4s:json4s-core_2.10:' + project.'json4s.version'
+  compile 'org.json4s:json4s-jackson_2.10:' + project.'json4s.version'
+  compile 'org.json4s:json4s-native_2.10:' + project.'json4s.version'
+  compile 'org.scala-lang:scala-library:' + project.'scala.version'
+  compile 'org.scala-lang:scala-reflect:' + project.'scala.version'
+  compile 'org.springframework.hateoas:spring-hateoas:' + project.'spring-hateos.version'
+  compile 'org.springframework:spring-aspects:' + project.'springframework.version'
+  compile 'org.springframework:spring-oxm:' + project.'springframework.version'
 
-  provided 'javax.servlet:javax.servlet-api:' + property("javax.servlet-api.version")
+  provided 'javax.servlet:javax.servlet-api:' + project.'javax.servlet-api.version'
   provided project(':gemfire-core')
 }
 

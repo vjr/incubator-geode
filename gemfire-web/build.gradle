@@ -1,11 +1,11 @@
 apply plugin: 'war'
 
 dependencies {
-  runtime 'org.springframework:spring-aspects:' + property("springframework.version")
-  runtime 'org.springframework:spring-oxm:' + property("springframework.version")
-  runtime 'commons-fileupload:commons-fileupload:' + property("commons-fileupload.version")
+  runtime 'org.springframework:spring-aspects:' + project.'springframework.version'
+  runtime 'org.springframework:spring-oxm:' + project.'springframework.version'
+  runtime 'commons-fileupload:commons-fileupload:' + project.'commons-fileupload.version'
   
-  provided 'javax.servlet:javax.servlet-api:' + property("javax.servlet-api.version")
+  provided 'javax.servlet:javax.servlet-api:' + project.'javax.servlet-api.version'
   
   // have to use output since we exclude the dependent classes from jar :(
   provided project(path: ':gemfire-core', configuration: 'classesOutput')
