@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'org.hibernate.build.gradle', name: 'gradle-maven-publish-auth', version: property("gradle-maven-publish-auth.version")
+        classpath group: 'org.hibernate.build.gradle', name: 'gradle-maven-publish-auth', version: project.'gradle-maven-publish-auth.version'
     }
 }
 
